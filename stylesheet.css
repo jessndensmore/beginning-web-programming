@@ -1,0 +1,32 @@
+a {
+    text-decoration: none;
+}
+
+a span {
+    color: purple;
+    font-weight: bold;
+}
+
+#websites {
+    color: purple;
+}
+
+.myDiv {
+    border: 5px outset purple;
+    background-color: rgb(250, 245, 112);
+    text-align: center;
+}
+
+#jDensmore {
+    text-align: center;
+}
+
+#dallas {
+    max-width: 100px;
+    max-height: 50px;
+    float: right;
+}
+
+.nav {
+    color: purple;
+}
