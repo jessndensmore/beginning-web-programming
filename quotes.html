@@ -1,97 +1,101 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Quote of the Day Program</title>
 </head>
+
 <body>
 
     <h1>Quote of the Day Program</h1>
 
     <nav>
         <a href="index.html" class="nav">Home |</a>
-        <a href="quotes.html" class="nav">Quotes</a>
+        <a href="quotes.html" class="nav">Quotes |</a>
+        <a href="secret-number-game" class="nav">Secret Number</a>
     </nav>
-    
+
     <h2>Your Quote:</h2>
     <p id="quoteOutput"></p>
 
     <h2>Favorite Websites:</h2>
     <div id="websiteOutput"></div>
 
-<script>
+    <script>
 
-// ================================
-// PART 1: QUOTES ARRAY
-// ================================
+        // ================================
+        // PART 1: QUOTES ARRAY
+        // ================================
 
-// Create an array with 5 quotes
-let quotes = [
-    "Believe in yourself.",
-    "Stay positive and work hard.",
-    "Small steps lead to big changes.",
-    "Consistency beats motivation.",
-    "Dream big and dare to fail."
-];
+        // Create an array with 5 quotes
+        let quotes = [
+            "Believe in yourself.",
+            "Stay positive and work hard.",
+            "Small steps lead to big changes.",
+            "Consistency beats motivation.",
+            "Dream big and dare to fail."
+        ];
 
-// Prompt user to enter a number
-let userNumber = prompt("Enter a number:");
+        // Prompt user to enter a number
+        let userNumber = prompt("Enter a number:");
 
-// Convert input to a number
-userNumber = parseInt(userNumber);
+        // Convert input to a number
+        userNumber = parseInt(userNumber);
 
-// Divide the number by 5 and get remainder
-let remainder = userNumber % 5;
+        // Divide the number by 5 and get remainder
+        let remainder = userNumber % 5;
 
-// Use remainder as array index
-let selectedQuote = quotes[remainder];
+        // Use remainder as array index
+        let selectedQuote = quotes[remainder];
 
-// Write quote to the page
-document.getElementById("quoteOutput").innerHTML = selectedQuote;
+        // Write quote to the page
+        document.getElementById("quoteOutput").innerHTML = selectedQuote;
 
 
-// ================================
-// PART 2: FAVORITE WEBSITES ARRAY
-// ================================
+        // ================================
+        // PART 2: FAVORITE WEBSITES ARRAY
+        // ================================
 
-// Create array of 3 favorite websites
-let websites = [
-    "https://www.google.com",
-    "https://www.youtube.com",
-    "https://www.github.com"
-];
+        // Create array of 3 favorite websites
+        let websites = [
+            "https://www.google.com",
+            "https://www.youtube.com",
+            "https://www.github.com"
+        ];
 
-// Function to display website links
-function displayWebsites(arrayName) {
-    let output = "";
+        // Function to display website links
+        function displayWebsites(arrayName) {
+            let output = "";
 
-    for (let i = 0; i < arrayName.length; i++) {
-        output += "<a href='" + arrayName[i] + "' target='_blank'>" 
-               + arrayName[i] + "</a><br>";
-    }
+            for (let i = 0; i < arrayName.length; i++) {
+                output += "<a href='" + arrayName[i] + "' target='_blank'>"
+                    + arrayName[i] + "</a><br>";
+            }
 
-    return output;
-}
+            return output;
+        }
 
-// Display original list
-document.getElementById("websiteOutput").innerHTML = displayWebsites(websites);
+        // Display original list
+        document.getElementById("websiteOutput").innerHTML = displayWebsites(websites);
 
-// Prompt user for their favorite website
-let userWebsite = prompt("Enter your favorite website (include https://):");
+        // Prompt user for their favorite website
+        let userWebsite = prompt("Enter your favorite website (include https://):");
 
-// Add user website to end of array
-websites.push(userWebsite);
+        // Add user website to end of array
+        websites.push(userWebsite);
 
-// Delete first website from array
-websites.shift();
+        // Delete first website from array
+        websites.shift();
 
-// Add a break line and label
-document.getElementById("websiteOutput").innerHTML += 
-    "<h3>Updated Website List:</h3>";
+        // Add a break line and label
+        document.getElementById("websiteOutput").innerHTML +=
+            "<h3>Updated Website List:</h3>";
 
-// Display revised list
-document.getElementById("websiteOutput").innerHTML += displayWebsites(websites);
+        // Display revised list
+        document.getElementById("websiteOutput").innerHTML += displayWebsites(websites);
 
-</script>
+    </script>
 
 </body>
+
 </html>
