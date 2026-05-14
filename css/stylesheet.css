@@ -34,3 +34,18 @@ a span {
 h1 {
     text-align: center;
 }
+
+h2 {
+    border: 5px outset purple;
+    background-color: rgb(250, 245, 112);
+    text-align: center;
+}
+
+#quoteOutput {
+    text-align: center;
+}
+
+#websiteOutput {
+    text-align: center;
+}
+
