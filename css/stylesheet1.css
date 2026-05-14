@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+    color: purple;
+    text-decoration: underline;
+}
+
+p {
+    text-align: center;
+}
+
+#scoreOutput {
+    font-weight: bold;
+    color: purple
+}
+
+h2 {
+    text-align: center;
+}
+
+.introDiv {
+    border: 5px outset purple;
+    background-color: rgb(250, 245, 112);
+    text-align: center;
+}
+
+.quote {
+    font-style: italic;
+}
+
+.scoreOutput {
+    font-weight: bold;
+}
+
+.percentOutput {
+    font-weight: bold;
+}
